@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { createStyles, Header, Container, Group, Burger, Paper, Transition } from '@mantine/core';
 import { useBooleanToggle } from '@mantine/hooks';
 import { links } from './menuItems';
+import { ColorSchemeToggle, ColorSchemeToggleMobile } from '../ColorSchemeToggle/ColorSchemeToggle';
 
 const HEADER_HEIGHT = 60;
 
@@ -75,6 +76,20 @@ const useStyles = createStyles((theme) => ({
       color: theme.colors[theme.primaryColor][theme.colorScheme === 'dark' ? 3 : 7],
     },
   },
+
+  logo: {
+    fontWeight: 700,
+    background: `linear-gradient(0deg, ${theme.colorScheme === 'dark' ? '#fff' : '#000'} 0%, #37c8ab 100%)`,
+    '-webkit-background-clip': 'text',
+    '-webkit-text-fill-color': 'transparent',
+  },
+  toggle: {
+    [theme.fn.smallerThan('md')]: {
+      position: 'fixed',
+      right: 0,
+      bottom: '50vh',
+    },
+  },
 }));
 
 export function HeaderMenu() {
@@ -100,11 +115,11 @@ export function HeaderMenu() {
   return (
     <Header height={HEADER_HEIGHT} mb={120} className={classes.root}>
       <Container className={classes.header}>
-        <h1>BRANDS</h1>
+        <h1 className={classes.logo}>BRANDS</h1>
         <Group spacing={5} className={classes.links}>
           {items}
+          <ColorSchemeToggle />
         </Group>
-
         <Burger
           opened={opened}
           onClick={() => toggleOpened()}
@@ -119,6 +134,7 @@ export function HeaderMenu() {
             </Paper>
           )}
         </Transition>
+        <ColorSchemeToggleMobile />
       </Container>
     </Header>
   );
