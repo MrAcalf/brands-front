@@ -79,7 +79,7 @@ const useStyles = createStyles((theme) => ({
 
   logo: {
     fontWeight: 700,
-    background: `linear-gradient(0deg, ${theme.colorScheme === 'dark' ? '#fff' : '#000'} 0%, #37c8ab 100%)`,
+    background: `linear-gradient(0deg, ${theme.colorScheme === 'dark' ? '#fff' : '#000'} 0%, #38D9A9 100%)`,
     '-webkit-background-clip': 'text',
     '-webkit-text-fill-color': 'transparent',
   },
