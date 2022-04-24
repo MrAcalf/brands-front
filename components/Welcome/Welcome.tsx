@@ -7,13 +7,14 @@ export function Welcome() {
   return (
     <>
       <Title className={classes.title} align="center" mt={100}>
-        Welcome to{' '}
+        Bem vindo à {' '}
         <Text
+          inherit
           variant="gradient"
           gradient={{ from: 'teal', to: 'white', deg: 180 }}
           component="span"
-          weight={400}
-          style={{ fontSize: 50 }}
+          weight={700}
+          className={classes.logo}
         >
           BRANDS
         </Text>
