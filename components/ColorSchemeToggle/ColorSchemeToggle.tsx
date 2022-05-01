@@ -6,6 +6,9 @@ const useStyles = createStyles((theme) => ({
     position: 'fixed',
     right: 0,
     bottom: '10vh',
+    ...(theme.colorScheme === 'light' && {
+      border: '1px solid #e9ecef',
+    }),
     [theme.fn.largerThan('sm')]: {
       display: 'none',
     },

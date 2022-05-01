@@ -49,6 +49,7 @@ interface MantineTheme {
 const theme: MantineTheme = {
   fontFamily: 'darkmode-on, sans-serif',
   black: '#1a1a1a',
+  white: '#fafafa',
   primaryColor: 'teal',
 };
 export default function App(props: AppProps & { colorScheme: ColorScheme }) {
