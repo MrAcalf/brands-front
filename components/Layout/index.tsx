@@ -1,4 +1,5 @@
 import React from 'react';
+import { Grid, Container } from '@mantine/core';
 import { HeaderMenu } from '../HeadMenu';
 
 interface PageProps {
@@ -8,8 +9,13 @@ interface PageProps {
 const Layout = ({ children }: PageProps) => (
     <>
       <HeaderMenu />
-      {children}
+      <Container my="md">
+      <Grid>
+        {children}
+      </Grid>
+      </Container>
+      {/* {children} */}
     </>
   );
 
-  export default Layout;
+export default Layout;
