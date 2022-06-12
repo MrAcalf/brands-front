@@ -1,11 +1,5 @@
-import { Welcome } from '../components/Welcome/Welcome';
-import { HeaderMenu } from '../components/HeadMenu';
+import Home from './home';
 
-export default function HomePage() {
-  return (
-    <>
-      <HeaderMenu />
-      <Welcome />
-    </>
-  );
+export default function Index() {
+  return <Home />;
 }
