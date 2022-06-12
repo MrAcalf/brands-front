@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React, { useState } from 'react';
 import { createStyles, Header, Container, Group, Burger, Paper, Transition } from '@mantine/core';
 import { useBooleanToggle } from '@mantine/hooks';
@@ -115,7 +116,12 @@ export function HeaderMenu() {
   return (
     <Header height={HEADER_HEIGHT} mb={120} className={classes.root}>
       <Container className={classes.header}>
-        <h1 className={classes.logo}>BRANDS</h1>
+        <Image
+          src="/logo.svg"
+          alt="Brands Logo"
+          width={36}
+          height={36}
+        />
         <Group spacing={5} className={classes.links}>
           {items}
           <ColorSchemeToggle />

@@ -13,7 +13,7 @@ export default createStyles((theme) => ({
   },
   logo: {
     fontWeight: 700,
-    background: `linear-gradient(0deg, ${theme.colorScheme === 'dark' ? '#fff' : '#000'} 0%, #38D9A9 100%)`,
+    background: 'linear-gradient(135deg, #C82AFF 0%, #37C8AB 100%)',
     '-webkit-background-clip': 'text',
     '-webkit-text-fill-color': 'transparent',
   },
